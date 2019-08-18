@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Công nghệ thông tin đại học thuỷ </title>
+    <link rel="stylesheet" href="bootstrap/js/bootstrap.js">
+    <link rel="shortcut icon" href="images/CSE logo.jpg" type="image/jpg"/>
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="bootstrap/js/bootstrap.min.js">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <script type="text/javascript" src="js/ddaccordion.js"></script>
+    <div id="sb-site">
+        <div class="wrap-back-to-top">
+            <a href="#0" class="cd-top"><img src="images/go-to-top.png"></a>
+        </div>
+        <section class="col-sm-12 content nopadding">
+            <div class="container nopadding">
+                <div class="block-nopadding back-blue" id="menumobile">
+                    <div class="content noidung">
+                        <div class="col-xs-6 nopadding menumobile-left">
+                            <span id="openmenu" class="sb-open-left"><i class="fa fa-bars" aria-hidden="true"></i>&nbsp;Danh mục</span>
+                            <span id="closemenu" class="sb-open-left2"><i class="fa fa-times" aria-hidden="true"></i>&nbsp;Danh mục</span></div>
+                        <div class="col-xs-6 nopadding text-right">
+                            <div class="language">
+
+                                <a href="trangchu.html">
+                                    <img class="icon_vn" src="images/img_blank.gif">
+                                </a>
+                                &nbsp;
+                                <a href="english.html">
+                                    <img class="icon_en" src="images/img_blank.gif">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="block nopadding"  >
+                    <div class="content noidung back-white">
+                        <div id="bannerroot" class="headertop">
+                            <div class="col-xs-12 nopadding header-left">
+                                <a href="trangchu.html">
+                                    <img class="img-responsive" src="images/csetlu.jpg">
+                                </a>
+                            </div>
+                            <div class="col-xs-12 nopadding header-right">
+
+                                <div class="nopadding header-right-content text-right">
+                                    <div class="language">
+                                        <p>
+                                            <a href="trangchu.html">
+                                                <img class="icon_vn" src="images/img_blank.gif">
+                                            </a>
+                                            <a href="trangchu.html">Tiếng Việt</a> |
+                                            <a href="english.html">
+                                                <img class="icon_en" src="images/img_blank.gif">
+                                            </a>
+                                            <a href="english.html">English</a>
+                                        </p>
+                                    </div>
+                                    <div class="input-group stylish-input-group" 
+                                    style= "width: 188px;">
+                            <span id="group" style="display:none;">root</span>
+                            <input type="text" name="searchword" id="qtukhoa1" class="form-control inputbox search-query" placeholder="Tìm kiếm" onblur="if (this.value == '')
+                                        this.value = 'Tìm kiếm ';" onfocus="if (this.value == 'Tìm kiếm ')
+                                                    this.value = '';"> 
+                            <span class="input-group-addon">
+                                <button id="btnsearch" type="button" onclick="check_search()">
+                                    
+                                </button>
+                            </span>
+                        </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-nopadding">
+                    <div class="content noidung menu-desktop">
+                        <ul class="table autoLayout absSubMenus" id="ja-cssmenu">
+                            <li>
+                                <a href="trangchu.html"><i class="fa fa-home fa-1-5" aria-hidden="true"></i></a>
+
+                            </li>
+                            <li>
+                                <a href="tongquan.html"><span class="menu-title">GIỚI THIỆU</span></a>
+                                <ul>
+                                    <li href="tongquan.html">
+                                        <a href="tongquan.html"><span class="menu-title">Lời chào mừng</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="menu-title">Tổ chức</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="menu-title">Hợp tác liên kết</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="tuyensinh.html"><span class="menu-title">NGHIÊN CỨU KHOA HỌC</span></a>
+                                <ul>
+                                    <li href="tongquan.html">
+                                        <a href="tongquan.html"><span class="menu-title">Các đề tài, dự án</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="menu-title">Thông tin seminar</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="menu-title">Công trình công bố</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="menu-title">Các phòng thí nghiệm</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span class="menu-title">ĐÀO TẠO</span></a>
+                                <ul>
+                                    <li>
+                                        <a href="daotao-khaothi.html"><span class="menu-title">Đào tạo đại học</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="menu-title">Đào tạo sau đại học</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="menu-title">Chuẩn đầu ra</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="menu-title">Định hướng nghành nghề</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="menu-title">Mô hình đào tạo</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span class="menu-title">BỘ MÔN - TRUNG TÂM</span></a>
+                                <ul>
+                                    <li>
+                                        <a href="khoaduoc.html"><span class="menu-title">Công nghệ phần mềm</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="menu-title">Hệ thống thông tin</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="menu-title">Khoa học máy tính</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="menu-title">Kĩ thuật máy tính và Mạng</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="menu-title">Toán học</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="menu-title">Toán học và Kĩ thuật tính toán</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="menu-title">Trung tâm tin học</span></a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span class="menu-title">SINH VIÊN</span></a>
+                                <ul>
+                                    <li>
+                                        <a href="#"><span class="menu-title">Tài liệu sinh viên</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="menu-title">Tổ tư vấn học tập</span></a>
+                                    </li>
+                                    <li>
+                                        <a><span class="menu-title">Biểu mẫu ĐATP</span></a>
+                                    </li>
+                                    <li>
+                                        <a><span class="menu-title">Luận văn tốt nghiệp</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span class="menu-title">TIN TỨC</span></a>
+                                <ul>
+                                    <li>
+                                        <a href="trungtamdaotaotuxa.html"><span class="menu-title">Sự kiện</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="trungtamGDCTQP.html"><span class="menu-title">CSE trên báo</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span class="menu-title">THÔNG BÁO</span></a>
+                                <ul>
+                                    <li>
+                                        <a href="Hoạt Động Phong Trào.html"><span class="menu-title">Thông báo</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="Biểu Mẫu Đơn Từ.html" target="_blank"><span class="menu-title">Thông báo đào tạo</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="Thông Tin Học Phí.html"><span class="menu-title">Tuyển dụng</span></a>
+                                    </li>
+                                    <li>
+                                        <a><span class="menu-title">Học bổng</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="topmenu1">
+                                <a target="_blank"><span class="menu-title">Thư Viện</span></a>
+                            </li>
+                            <li id="topmenu2">
+                                <a><span class="menu-title">Góp ý</span></a>
+                            </li>
+                            <li id="topmenu4">
+                                <a href="login.html" style="border-right: 0px none;"><span class="menu-title">Login</span></a>
+                            </li>
+                            <!--end NAVBAR-->
+                    </div>
+                </div>
+                <!--end nav container-->
+                <!--carousel-->
+                <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+                <script type="text/javascript" src="js/responsive_bootstrap_carousel.js"></script>
+                <div class="block-nopadding slideshow">
+                    <div class="content noidung">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/banner1.jpg" class="d-block w-100" alt="width:100%;">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/banner4.jpg" class="d-block w-100" alt="width:110%;">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                        <!--end car-->
+                        <!--Body-body1-->
+                        <div class="block-nopadding no-padding-home">
+                            <div class="content noidung">
+                                <div class="col-sm-9 no-padding-left padding-right-5">
+
+                                </div>
+                                <div class="col-sm-3 nopadding">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Template Start: site/home/WrapHome -->
+                        <div class="block-nopadding">
+                            <div class="content noidung">
+                                <div class="col-sm-9 no-padding-left padding-right-5">
+                                    <div class="block-content nopadding">
+
+                                        <!--Now-->
+                                        <div class="header-block">
+                                            <img class="icon-tin-tuyen-sinh" src="images/img_blank.gif">
+                                            <a href="https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh" class="title-block text-blue">
+                            Tin tuyển sinh
+                        </a>
+
+                                        </div>
+                                        <div class="content-block height-block">
+                                            <div class="col-sm-12 nopadding">
+                                                <div class="col-sm-9 news-block-left">
+                                                    <div class="image-news-home">
+                                                        <a href="https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14575900-hoc-cu-nhan-quan-tri-nha-hang-chuan-muc-phap-bang-cap-phap-ngay-tai-viet-nam" class="link-img">
+
+                                                            <img class="img-responsive" alt="Học cử nhân Quản trị nhà hàng " chuẩn mực ph? - bằng cấp ph? " ngay tại việt nam" src="images/coverpr_cergypontoise-1557716276.jpg">
+
+                                                        </a>
+                                                    </div>
+                                                    <a href="https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14575900-hoc-cu-nhan-quan-tri-nha-hang-chuan-muc-phap-bang-cap-phap-ngay-tai-viet-nam" class="news-title text-blue">
+                                Học cử nhân Quản trị nhà hàng "chuẩn mực Pháp - bằng cấp Pháp" ngay tại Việt Nam
+                            </a>
+                                                    <p class="des_news">
+                                                        Theo CafeF - Nước Pháp với nền giáo dục hàng đầu thế giới và đặc biệt uy tín đào tạo trong nhóm ngành Quản trị nhà hàng và văn hóa ẩm thực của Pháp là một chuẩn mực mà bất cứ ai yêu thích lĩnh vực F&B đều mong muốn trải nghiệm. </p>
+                                                </div>
+                                                <div class="col-sm-3 news-block-right">
+                                                    <img class="img-responsive" alt="10 lưu ý với thí sinh chuẩn bị bước vào kỳ thi THPT Quốc gia năm 2019" src="images/thi_thpt_2019_0038458-1557116518.jpg">
+                                                    </a>
+                                                    <a href="https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14575797-10-luu-y-voi-thi-sinh-chuan-bi-buoc-vao-ky-thi-thpt-quoc-gia-nam-2019" class="title text-bold wow slideInUp animated">
+                                        10 lưu ý với thí sinh chuẩn bị bước vào kỳ thi THPT Quốc gia năm 2019
+                                    </a>
+                                                    <a href="https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14575796-gan-53-thi-sinh-chon-khoa-hoc-xa-hoi-de-thi-thpt-quoc-gia-2019" class="title wow slideInUp animated">
+                                        Gần 53% thí sinh chọn Khoa học Xã hội để thi THPT quốc gia 2019
+                                    </a>
+                                                    <a href="https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14575782-hutech-chao-mung-hoc-sinh-truong-thpt-le-quy-don-dong-nai-hao-hung-den-tham-quan" class="title wow slideInUp animated">
+                                        HUTECH chào mừng học sinh Trường THPT Lê Quý Đôn - Đồng Nai hào hứng đến tham quan
+                                    </a>
+                                                    <a href="https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14575754-tuyen-sinh-2019-xet-tuyen-hoc-ba-gay-bao-tai-hutech-trong-ngay-dau-nhan-ho-so" class="title wow slideInUp animated">
+                                        Tuyển sinh 2019: Xét tuyển học bạ gây “bão” tại HUTECH trong ngày đầu nhận hồ sơ
+                                    </a>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 news-block-bottom">
+                                                <a href="https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14575867-logistics-va-quan-ly-chuoi-cung-ung-hoc-de-di-that-xa-trong-thoi-dai-toan-cau-hoa" class="col-sm-3 link-img  title ">
+                                                    <div class="img">
+
+                                                        <img class="img-responsive" alt="Logistics và Quản lý chuỗi cung ứng - Học để “đi thật xa” trong thời đại toàn cầu hóa" src="images/coverpr_logistic-1557460874.jpg">
+                                                    </div>
+                                                    Logistics và Quản lý chuỗi cung ứng - Học để “đi thật xa” trong thời đại toàn cầu hóa
+                                                </a>
+                                                <a href="https://www.hutech.edu.vn/homepage/tin-tuc/tin-tuyen-sinh/14575838-5-ly-do-khien-phuong-thuc-xet-tuyen-hoc-ba-tai-hutech-hut-thi-sinh" class="col-sm-3 link-img  title ">
+                                                    <div class="img">
+
+                                                        <img class="img-responsive" alt="5 lý do khiến phương thức xét tuyển học bạ tại HUTECH “hút” thí sinh" src="images/cover_541-1557315151.jpg">
+                                                    </div>
+                                                    5 lý do khiến phương thức xét tuyển học bạ tại HUTECH “hút” thí sinh
+                                                </a>
+                                                <a href="https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14575836-hutech-chinh-thuc-tuyen-sinh-dao-tao-nganh-logistics-va-quan-ly-chuoi-cung-ung-trinh" class="col-sm-3 link-img  title ">
+                                                    <div class="img">
+
+                                                        <img class="img-responsive" alt="HUTECH chính thức tuyển sinh đào tạo ngành Logistics và Quản lý chuỗi cung ứng" src="images/bc4a97a1_a327_44ce_abb3_7f6e9e03031f-1557313237.jpg">
+                                                    </div>
+                                                    HUTECH chính thức tuyển sinh đào tạo ngành Logistics và Quản lý chuỗi cung ứng
+                                                </a>
+                                                <a href="https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14575829-hutech-nhan-ho-so-lien-thong-dai-hoc-den-155" class="col-sm-3 link-img  title end-block">
+                                                    <div class="img">
+
+                                                        <img class="img-responsive" alt="HUTECH nhận hồ sơ Liên thông Đại học đến 15/5" src="images/tai_chinh_ngan_hang_hutech_01-1557299786.jpg">
+                                                    </div>
+                                                    HUTECH nhận hồ sơ Liên thông Đại học đến 15/5
+                                                </a>
+
+                                            </div>
+                                            <div class="col-sm-12 text-right padding">
+                                                <a href="https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh" class="text-red text-bold">
+                                                    <i class="fa fa-plus-square fa-1 text-red" aria-hidden="true"></i> Xem tất cả
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 nopadding">
+                                    <div class="block-content nopadding">
+                                        <div class="header-block">
+                                            <img class="icon-he-thong-dao-tao" src="images/img_blank.gif">
+                                            <span class="title-block text-blue">Hệ thống đào tạo</span>
+                                        </div>
+                                        <div class="content-block height-block he-thong-dao-tao">
+                                            <div id="MAUXANHDUONG">
+                                                <a href="https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14573527-hutech-thong-bao-tuyen-sinh-dao-tao-trinh-do-tien-si-nam-2019-dot-1">
+                                                    <img class="iconchild icon-he-thong-dao-tao-tien-sy" src="images/img_blank.gif">
+                                                    <span>Tuyển sinh Tiến sĩ</span>
+                                                </a>
+                                            </div>
+                                            <div id="MAUXANHTROI">
+                                                <a href="https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14573526-hutech-thong-bao-tuyen-sinh-dao-tao-trinh-do-thac-si-nam-2019-dot-1">
+                                                    <img class="iconchild icon-he-thong-dao-tao-thac-sy" src="images/img_blank.gif">
+                                                    <span>Tuyển sinh Thạc sĩ</span>
+                                                </a>
+                                            </div>
+                                            <div id="MAUHONG">
+                                                <a href="https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14573516-de-an-tuyen-sinh-dai-hoc-chinh-quy-nam-2019-cua-hutech">
+                                                    <img class="iconchild icon-he-thong-dao-tao-dai-hoc" src="images/img_blank.gif">
+                                                    <span>Tuyển sinh Đại học</span>
+                                                </a>
+                                            </div>
+                                            <div id="MAUCAM">
+                                                <a href="https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14573607-thong-tin-tuyen-sinh-ky-su-cu-nhan-thuc-hanh-hutech-2019">
+                                                    <img class="iconchild icon-he-thong-dao-tao-cu-nhan-thuc-hanh" src="images/img_blank.gif">
+                                                    <span>Kỹ sư thực hành</span>
+                                                </a>
+                                            </div>
+                                            <div id="MAUTIM">
+                                                <a href="https://www.hutech.edu.vn/quocte">
+                                                    <img class="iconchild icon-he-thong-dao-tao-quoc-te" src="images/img_blank.gif">
+                                                    <span>Đào tạo Quốc tế</span>
+                                                </a>
+                                            </div>
+                                            <div id="MAUDO">
+                                                <a href="https://www.hutech.edu.vn/vjit">
+                                                    <img class="iconchild icon-he-thong-dao-tao-chuan-nhat-ban" src="images/img_blank.gif">
+                                                    <span>Đại học chuẩn Nhật Bản</span>
+                                                </a>
+                                            </div>
+                                            <div id="MAUXANHDUONGDAM">
+                                                <a href="https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14574421-thong-bao-tuyen-sinh-lien-thong-tccn-cao-dang-cao-dang-nghe-len-dai-hoc-dot-1-nam-2019">
+                                                    <img class="iconchild icon-he-thong-dao-tao-lien-thong" src="images/img_blank.gif">
+                                                    <span>Liên thông - Bằng 2</span>
+                                                </a>
+                                            </div>
+
+                                            <div class="text-center">
+                                                <div id="myCarouselRight" class="carousel slide" data-ride="carousel">
+                                                    <!-- Indicators -->
+                                                    <ol class="carousel-indicators">
+
+                                                        <li data-target="#myCarouselRight" data-slide-to="0" class="active"></li>
+
+                                                        <li data-target="#myCarouselRight" data-slide-to="1" class></li>
+
+                                                        <li data-target="#myCarouselRight" data-slide-to="2" class></li>
+
+                                                        <li data-target="#myCarouselRight" data-slide-to="3" class></li>
+
+                                                        <li data-target="#myCarouselRight" data-slide-to="4" class></li>
+                                                    </ol>
+
+                                                    <!-- Wrapper for slides -->
+                                                    <div class="carousel-inner">
+                                                        <div class="item active">
+                                                            <a href="http://www.hutech.edu.vn/chuong-trinh-thac-si-quoc-te">
+                                                                <img src="images/thac_si_quoc_te_2018_resize_opt2_240x235-1552978598.png" alt style="width:100%;">
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="item ">
+                                                            <a href="https://www.hutech.edu.vn/quocte/dai-hoc-lincoln/tuyen-sinh/cu-nhan-qtkd-1-nam">
+                                                                <img src="images/lien_thong_quoc_te3_2018_resize_240x235-1552978676.jpg" alt style="width:100%;">
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="item ">
+                                                            <a href="https://www.hutech.edu.vn/quocte/dai-hoc-cergy-pontoise/tuyen-sinh/cu-nhan-1-nam-dai-hoc-cergy-pontoise-phap">
+                                                                <img src="images/lien_thong_quoc_te_2018_resize_240x235-1552978701.jpg" alt style="width:100%;">
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="item ">
+                                                            <a href="https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14574421-thong-bao-tuyen-sinh-lien-thong-tccn-cao-dang-cao-dang-nghe-len-dai-hoc-dot-1-nam-2019">
+                                                                <img src="images/lien_thong_trong_nuoc_2019_resize_240x235-1552978724.jpg" alt style="width:100%;">
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="item ">
+                                                            <a href="http://www.hutech.edu.vn/tuyensinh/dang-ky/van-bang-2">
+                                                                <img src="images/van_bang_2-1557134217.png" alt style="width:100%;">
+                                                            </a>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <!-- Left and right controls -->
+                                                    <a class="left carousel-control" href="#myCarouselRight" data-slide="prev">
+                                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                                        <span class="sr-only">Previous</span>
+                                                    </a>
+                                                    <a class="right carousel-control" href="#myCarouselRight" data-slide="next">
+                                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                                        <span class="sr-only">Next</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-nopadding">
+                            <div class="content noidung">
+                                <div class="col-sm-9 no-padding-left padding-right-5">
+
+                                    <div class="block-content nopadding">
+                                        <div class="header-block">
+                                            <img class="icon-tin-hutech" src="images/img_blank.gif">
+
+                                            <a href="https://www.hutech.edu.vn/homepage/index.php/tin-tuc/tin-hutech" class="title-block text-blue">
+                            Tin HUTECH
+                        </a>
+
+                                        </div>
+                                        <div class="content-block height-block">
+                                            <div class="col-sm-12 nopadding height-block-2">
+                                                <div class="col-sm-9 news-block-left">
+                                                    <div class="image-news-home">
+                                                        <a href="https://www.hutech.edu.vn/homepage/tin-tuc/tin-hutech/14575947-hutech-ky-ket-hop-tac-voi-trung-tam-anh-ngu-atlanta" class="link-img">
+
+                                                            <img class="img-responsive" alt="HUTECH ký kết hợp tác với Trung tâm Anh ngữ ATLANTA" src="images/bia-1557918927.png">
+
+                                                        </a>
+                                                    </div>
+                                                    <a href="https://www.hutech.edu.vn/homepage/tin-tuc/tin-hutech/14575947-hutech-ky-ket-hop-tac-voi-trung-tam-anh-ngu-atlanta" class="news-title text-blue">
+                                HUTECH ký kết hợp tác với Trung tâm Anh ngữ ATLANTA
+                            </a>
+                                                    <p class="des_news">
+                                                        Sáng nay (15/5), tại Trụ sở chính của Trường ĐH Công nghệ TP. HCM (HUTECH) đã diễn ra Lễ ký kết hợp giữa HUTECH và Trung tâm Anh ngữ ATLANTA nhằm mang đến cầu nối vững chắc, cung cấp thông tin và kỹ năng nghề nghiệp cho sinh viên. </p>
+                                                </div>
+                                                <div class="col-sm-3 news-block-right">
+                                                    <a href="https://www.hutech.edu.vn/homepage/tin-tuc/tin-hutech/14575781-an-tuong-voi-hang-loat-y-tuong-doc-dao-tai-vong-so-khao-hutech-designer-lan-v-2019" class="link-img">
+
+                                                        <img class="img-responsive" alt="Ấn tượng với hàng loạt ý tưởng độc đáo tại vòng Sơ khảo HUTECH Designer lần V - 2019" src="images/coversokhaohutechdesigner-1556882044.jpg">
+                                                    </a>
+                                                    <a href="https://www.hutech.edu.vn/homepage/tin-tuc/tin-hutech/14575781-an-tuong-voi-hang-loat-y-tuong-doc-dao-tai-vong-so-khao-hutech-designer-lan-v-2019" class="title text-bold wow slideInUp animated">
+                                        Ấn tượng với hàng loạt ý tưởng độc đáo tại vòng Sơ khảo HUTECH Designer lần V - 2019
+                                    </a>
+                                                    <a href="https://www.hutech.edu.vn/homepage/tin-tuc/tin-hutech/14575723-hutech-to-chuc-le-ky-niem-24-nam-ngay-thanh-lap-va-don-nhan-co-thi-dua-cua-chinh-phu" class="title wow slideInUp animated">
+                                        HUTECH tổ chức Lễ kỷ niệm 24 năm ngày thành lập và đón nhận Cờ thi đua của Thủ tướng Chính phủ
+                                    </a>
+                                                    <a href="https://www.hutech.edu.vn/homepage/tin-tuc/tin-hutech/14575724-trung-tam-du-hoc-toan-cau-edunet-khai-truong-van-phong-moi-tai-hutech" class="title wow slideInUp animated">
+                                        Trung tâm Du học toàn cầu EduNet khai trương văn phòng mới tại HUTECH
+                                    </a>
+                                                    <a href="https://www.hutech.edu.vn/homepage/tin-tuc/tin-hutech/14575725-chung-ket-bong-da-hoi-thao-cb-gv-nv-chao-lua-victory-va-tran-dai-chien-giua-nhung-cap-bai-trung" class="title wow slideInUp animated">
+                                        Chung kết Bóng đá Hội thao CB-GV-NV: Chảo lửa Victory và trận đại chiến giữa những “cặp bài trùng”
+                                    </a>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 news-block-bottom">
+                                                <a href="https://www.hutech.edu.vn/homepage/tin-tuc/tin-hutech/14575924-hoc-va-lam-gi-de-thanh-cong-trong-thoi-dai-4-0-co-hoi-giao-luu-va-doi-thoai-cung-cac-ceo-noi-tieng" class="col-sm-3 link-img  title ">
+                                                    <div class="img">
+
+                                                        <img class="img-responsive" alt="“Học và làm gì để thành công trong thời đại 4.0?” - Cơ hội giao lưu, đối thoại cùng các CEO nổi tiếng" src="images/cover03ngayketnoidoanhnghiep-1557742780.jpg">
+                                                    </div>
+                                                    “Học và làm gì để thành công trong thời đại 4.0?” - Cơ hội giao lưu, đối thoại cùng các CEO nổi tiếng
+                                                </a>
+                                                <a href="https://www.hutech.edu.vn/homepage/tin-tuc/tin-hutech/14575904-sinh-vien-khoa-duoc-dinh-huong-nghe-nghiep-tai-hoi-thao-huong-nghiep-duoc-trong-ky-nguyen-so" class="col-sm-3 link-img  title ">
+                                                    <div class="img">
+
+                                                        <img class="img-responsive" alt="Sinh viên Khoa Dược định hướng nghề nghiệp tại hội thảo “Hướng nghiệp Dược trong kỷ nguyên số”" src="images/coverhoithaoduockynguyenso-1557720970.jpg">
+                                                    </div>
+                                                    Sinh viên Khoa Dược định hướng nghề nghiệp tại hội thảo “Hướng nghiệp Dược trong kỷ nguyên số”
+                                                </a>
+                                                <a href="https://www.hutech.edu.vn/homepage/tin-tuc/tin-hutech/14575876-lanh-dao-sacombank-dinh-huong-nghe-nghiep-cho-sinh-vien-hutech" class="col-sm-3 link-img  title ">
+                                                    <div class="img">
+
+                                                        <img class="img-responsive" alt="Lãnh đạo Sacombank định hướng nghề nghiệp cho sinh viên HUTECH" src="images/coverhoithaosacombank-1557482149.jpg">
+                                                    </div>
+                                                    Lãnh đạo Sacombank định hướng nghề nghiệp cho sinh viên HUTECH
+                                                </a>
+                                                <a href="https://www.hutech.edu.vn/homepage/tin-tuc/tin-hutech/14575799-nganh-ky-thuat-moi-truong-hutech-20-nam-nhin-lai-1999-2019" class="col-sm-3 link-img  title end-block">
+                                                    <div class="img">
+
+                                                        <img class="img-responsive" alt="Ngành Kỹ thuật môi trường HUTECH - 20 năm nhìn lại (1999 - 2019)" src="images/cover20nammoitruong-1557131153.jpg">
+                                                    </div>
+                                                    Ngành Kỹ thuật môi trường HUTECH - 20 năm nhìn lại (1999 - 2019)
+                                                </a>
+
+                                            </div>
+                                            <div class="col-sm-12 text-right padding">
+
+                                                <a href="https://www.hutech.edu.vn/homepage/index.php/tin-tuc/tin-hutech" class="text-red text-bold">
+                                                    <i class="fa fa-plus-square fa-1 text-red" aria-hidden="true"></i> Xem tất cả
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-3 nopadding">
+                                    <div class="block-content nopadding">
+                                        <div class="header-block">
+                                            <img class="icon-tin-noi-bat" src="images/img_blank.gif">
+                                            <span class="title-block text-red">Tin nổi bật</span>
+                                        </div>
+                                        <div class="content-block height-block">
+                                            <div class="height-block-2">
+                                                <ul class="latestnews">
+
+                                                    <li class="wow slideInUp animated">
+                                                        <a class="latestnews" href="https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14573516-de-an-tuyen-sinh-dai-hoc-chinh-quy-nam-2019-cua-hutech">
+                                Đề án tuyển sinh Đại học chính quy năm 2019 của HUTECH
+                                <img src="images/newicon_vi.gif">
+                            </a>
+                                                    </li>
+                                                    <li class="wow slideInUp animated">
+                                                        <a class="latestnews" href="https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14575661-hutech-chinh-thuc-nhan-ho-so-xet-tuyen-hoc-ba-tu-ngay-25">
+                                HUTECH chính thức nhận hồ sơ xét tuyển học bạ từ ngày 2/5
+                                <img src="images/newicon_vi.gif">
+                            </a>
+                                                    </li>
+                                                    <li class="wow slideInUp animated">
+                                                        <a class="latestnews" href="https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14575719-tuyen-sinh-2019-dai-hoc-hutech-se-to-chuc-04-dot-thi-mon-nang-khieu-ve">
+                                Tuyển sinh 2019: HUTECH sẽ tổ chức 04 đợt thi môn Năng khiếu Vẽ
+                                <img src="images/newicon_vi.gif">
+                            </a>
+                                                    </li>
+                                                    <li class="wow slideInUp animated">
+                                                        <a class="latestnews" href="https://www.hutech.edu.vn/dang-ky-xet-hoc-ba">
+                                Đăng ký xét tuyển học bạ trực tuyến
+                                <img src="images/newicon_vi.gif">
+                            </a>
+                                                    </li>
+                                                    <li class="wow slideInUp animated">
+                                                        <a class="latestnews" href="https://www.hutech.edu.vn/tuyensinh/tin-tuc/tin-tuyen-sinh/14575217-hutech-to-chuc-ky-thi-tuyen-sinh-rieng-trinh-do-dai-hoc-nam-2019">
+                                HUTECH tổ chức kỳ thi tuyển sinh riêng 2019
+                                <img src="images/newicon_vi.gif">
+                            </a>
+                                                    </li>
+
+                                                    <li class="wow slideInUp animated">
+                                                        <a class="latestnews" href="http://tuyensinh.hutech.edu.vn/tuvantuyensinh/">
+                                Tư vấn tuyển sinh trực tuyến
+                                <img src="images/newicon_vi.gif">
+                            </a>
+                                                    </li>
+                                                    <li class="wow slideInUp animated">
+                                                        <a class="latestnews" href="http://tuyendung.hutech.edu.vn/tuyendung">
+                                Thông tin tuyển dụng
+                                <img src="images/newicon_vi.gif">
+                            </a>
+                                                    </li>
+                                                </ul>
+                                                <div class="header-block sinh-vien-khoi-nghiep">
+                                                    <img class="icon-sinh-vien-khoi-nghiep" src="images/img_blank.gif">
+                                                    <span class="title-block text-blue">Sinh viên khởi nghiệp</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 news-block-bottom text-center">
+                                                <a href="http://khoinghiep.hutech.edu.vn/" target="_blank">
+                                                    <img class="img-responsive" alt src="images/khoi-nghiep.png">
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-nopadding wow fadeIn">
+                            <div class="content noidung back-white border-radius">
+                                <div class="header-block">
+                                    <div class="title-line-right title-line-orange">
+                                        <img class="icon-media" src="images/img_blank.gif">
+                                        <a href="https://www.hutech.edu.vn/media" class="title-block text-orange">MEDIA</a>
+                                    </div>
+                                </div>
+                                <div class="content-block">
+                                    <div class="col-sm-12 nopadding wow slideInRight animated">
+                                        <div class="col-xs-6 col-md-3 col-sm-3 thumb-video">
+                                            <a href="https://www.hutech.edu.vn/media/video/hutech-360/125-03-buoc-hoan-thien-ho-so-xet-tuyen-hoc-ba" class="text-bold">
+                                                <div class="img">
+                                                    <img class="img-responsive thumb" src="images/620x413_xet_hoc_ba-1557473763.png">
+                                                    <img data-brackets-id="18211" class="icon-media-play" src="images/img_blank.gif">
+                                                </div>
+                                                03 bước hoàn thiện hồ sơ xét tuyển học bạ
+                                            </a>
+                                        </div>
+                                        <div class="col-xs-6 col-md-3 col-sm-3 thumb-video">
+                                            <a href="https://www.hutech.edu.vn/media/video/kham-pha-hutech/124-co-ngoi-xin-so-cua-sinh-vien-ky-thuat-hutech" class="text-bold">
+                                                <div class="img">
+                                                    <img class="img-responsive thumb" src="images/co_ngoi_thuc_hanh_xin_xo_cua_sv_ky_thuat-1556764366.jpg">
+                                                    <img data-brackets-id="18211" class="icon-media-play" src="images/img_blank.gif">
+                                                </div>
+                                                Cơ ngơi xịn sò của sinh viên Kỹ thuật HUTECH
+                                            </a>
+                                        </div>
+                                        <div class="col-xs-6 col-md-3 col-sm-3 thumb-video">
+                                            <a href="https://www.hutech.edu.vn/media/video/hutech-360/123-hutech-24-nam-nhung-moc-son-dang-nho" class="text-bold">
+                                                <div class="img">
+                                                    <img class="img-responsive thumb" src="images/24_nam-1556101406.png">
+                                                    <img data-brackets-id="18211" class="icon-media-play" src="images/img_blank.gif">
+                                                </div>
+                                                HUTECH 24 năm - Những mốc son đáng nhớ
+                                            </a>
+                                        </div>
+                                        <div class="col-xs-6 col-md-3 col-sm-3 thumb-video">
+                                            <a href="https://www.hutech.edu.vn/media/video/kham-pha-hutech/122-lac-giua-ngay-hoi-viec-lam-cua-sinh-vien-it-hutech" class="text-bold">
+                                                <div class="img">
+                                                    <img class="img-responsive thumb" src="images/hutech_openday-1555646124.png">
+                                                    <img data-brackets-id="18211" class="icon-media-play" src="images/img_blank.gif">
+                                                </div>
+                                                Lạc giữa ngày hội việc làm của sinh viên IT HUTECH
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block">
+                            <div class="content noidung">
+                                <div class="col-sm-9 no-padding-left padding-right-5">
+                                    <div class="block-content nopadding">
+                                        <div class="header-block">
+                                            <img class="icon-hoat-dong-sinh-vien" src="images/img_blank.gif">
+
+                                            <a href="https://www.hutech.edu.vn/homepage/index.php/tin-tuc/hoat-dong-sinh-vien" class="title-block text-blue">
+                            Hoạt động sinh viên
+                        </a>
+
+                                        </div>
+                                        <div class="content-block height-block">
+                                            <div class="col-sm-12 nopadding">
+                                                <div class="col-sm-9 news-block-left">
+                                                    <div class="image-news-home">
+                                                        <a href="https://www.hutech.edu.vn/homepage/tin-tuc/hoat-dong-sinh-vien/14575930-can-bo-doan-hoi-chu-chot-hutech-tham-gia-tap-huan-nghiep-vu-tai-vung-tau" class="link-img">
+
+                                                            <img class="img-responsive" alt="Cán bộ Đoàn - Hội chủ chốt HUTECH tham gia tập huấn nghiệp vụ tại Vũng Tàu" src="images/cover_taphuan_canbo_doan_hoi-1557805805.png">
+                                                        </a>
+                                                    </div>
+                                                    <a href="https://www.hutech.edu.vn/homepage/tin-tuc/hoat-dong-sinh-vien/14575930-can-bo-doan-hoi-chu-chot-hutech-tham-gia-tap-huan-nghiep-vu-tai-vung-tau" class="news-title text-blue">
+                                Cán bộ Đoàn - Hội chủ chốt HUTECH tham gia tập huấn nghiệp vụ tại Vũng Tàu
+                            </a>
+                                                    <p class="des_news">
+                                                        Trong hai ngày 11 và 12/05/2019, hơn 300 cán bộ Đoàn - Hội của HUTECH đã tham gia chương trình “Tập huấn bồi dưỡng nghiệp vụ, kỹ năng cho cán bộ Đoàn - Hội chủ chốt, năm học 2018 - 2019” tại Khu du lịch Hồ Tràm Camping, Vũng Tàu. </p>
+                                                </div>
+                                                <div class="col-sm-3 news-block-right">
+                                                    <a href="https://www.hutech.edu.vn/homepage/tin-tuc/hoat-dong-sinh-vien/14575891-sinh-vien-hutech-trai-nghiem-san-pham-cong-nghe-tai-ngay-hoi-may-tinh-khoi-nganh-thiet-ke" class="link-img">
+
+                                                        <img class="img-responsive" alt="Sinh viên HUTECH trải nghiệm sản phẩm công nghệ tại “Ngày hội máy tính khối ngành Thiết kế”" src="images/cover-1557563394.png">
+                                                    </a>
+                                                    <a href="https://www.hutech.edu.vn/homepage/tin-tuc/hoat-dong-sinh-vien/14575891-sinh-vien-hutech-trai-nghiem-san-pham-cong-nghe-tai-ngay-hoi-may-tinh-khoi-nganh-thiet-ke" class="title text-bold wow slideInUp animated">
+                                        Sinh viên HUTECH trải nghiệm sản phẩm công nghệ tại “Ngày hội máy tính khối ngành Thiết kế”
+                                    </a>
+                                                    <a href="https://www.hutech.edu.vn/homepage/tin-tuc/hoat-dong-sinh-vien/14575889-co-hoi-nhan-hoc-bong-luong-van-can-danh-cho-sinh-vien-hutech" class="title wow slideInUp animated">
+                                        Cơ hội nhận học bổng Lương Văn Can dành cho sinh viên HUTECH
+                                    </a>
+                                                    <a href="https://www.hutech.edu.vn/homepage/tin-tuc/hoat-dong-sinh-vien/14575880-sinh-vien-kien-truc-my-thuat-tim-hieu-cong-nghe-in-lua-va-ky-thuat-so-tai-viet-nam" class="title wow slideInUp animated">
+                                        Sinh viên Kiến trúc - Mỹ thuật tìm hiểu Công nghệ in lụa và Kỹ thuật số tại Việt Nam
+                                    </a>
+                                                    <a href="https://www.hutech.edu.vn/homepage/tin-tuc/hoat-dong-sinh-vien/14575877-tham-du-workshop-inspirational-talks-ngay-175-de-tim-bi-quyet-khoi-nghiep-thanh-cong" class="title wow slideInUp animated">
+                                        Tham dự Workshop & Inspirational Talks ngày 17/5 để tìm bí quyết khởi nghiệp thành công
+                                    </a>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 news-block-bottom">
+                                                <a href="https://www.hutech.edu.vn/homepage/tin-tuc/hoat-dong-sinh-vien/14575917-danh-gia-ren-luyen-hoc-ky-ii-nam-hoc-2018-2019-se-dien-ra-tu-0106-den-26062019" class="col-sm-3 link-img  title ">
+                                                    <div class="img">
+
+                                                        <img class="img-responsive" alt="Đánh giá rèn luyện Học kỳ II năm học 2018 - 2019 sẽ diễn ra từ 01/06 đến 26/06/2019" src="images/danh_gia_ren_luyen_thang_5_541-1557733676.png">
+                                                    </div>
+                                                    Đánh giá rèn luyện Học kỳ II năm học 2018 - 2019 sẽ diễn ra từ 01/06 đến 26/06/2019
+                                                </a>
+                                                <a href="https://www.hutech.edu.vn/homepage/tin-tuc/hoat-dong-sinh-vien/14575913-sinh-vien-kt-tc-nh-huong-ung-phong-trao-nuoi-heo-dat-ung-ho-mua-he-xanh-2019" class="col-sm-3 link-img  title ">
+                                                    <div class="img">
+
+                                                        <img class="img-responsive" alt="Sinh viên KT-TC-NH hưởng ứng phong trào “Nuôi heo đất” ủng hộ Mùa hè xanh 2019" src="images/covernuoiheodat-1557731758.jpg">
+                                                    </div>
+                                                    Sinh viên KT-TC-NH hưởng ứng phong trào “Nuôi heo đất” ủng hộ Mùa hè xanh 2019
+                                                </a>
+                                                <a href="https://www.hutech.edu.vn/homepage/tin-tuc/hoat-dong-sinh-vien/14575909-lanh-dao-hutech-gap-mat-sinh-vien-dang-o-ktx-dhqg-tphcm" class="col-sm-3 link-img  title ">
+                                                    <div class="img">
+
+                                                        <img class="img-responsive" alt="Lãnh đạo HUTECH gặp mặt Sinh viên đang ở KTX ĐHQG-TPHCM" src="images/img_7363-1557730044.png">
+                                                    </div>
+                                                    Lãnh đạo HUTECH gặp mặt Sinh viên đang ở KTX ĐHQG-TPHCM
+                                                </a>
+                                                <a href="https://www.hutech.edu.vn/homepage/tin-tuc/hoat-dong-sinh-vien/14575890-sinh-vien-khoa-nhat-ban-hoc-tim-hieu-co-hoi-du-dien-dan-nghe-nghiep-tai-singapore" class="col-sm-3 link-img  title end-block">
+                                                    <div class="img">
+
+                                                        <img class="img-responsive" alt="Sinh viên Khoa Nhật Bản học tìm hiểu cơ hội dự diễn đàn nghề nghiệp tại Singapore" src="images/cover-1557565075.png">
+                                                    </div>
+                                                    Sinh viên Khoa Nhật Bản học tìm hiểu cơ hội dự diễn đàn nghề nghiệp tại Singapore
+                                                </a>
+
+                                            </div>
+                                            <div class="col-sm-12 text-right padding">
+
+                                                <a href="https://www.hutech.edu.vn/homepage/index.php/tin-tuc/hoat-dong-sinh-vien" class="text-red text-bold">
+                                                    <i class="fa fa-plus-square fa-1 text-red" aria-hidden="true"></i> Xem tất cả
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 nopadding">
+                                    <div class="block-content nopadding">
+                                        <div class="header-block">
+                                            <img class="icon-lich-su-kien" src="images/img_blank.gif">
+                                            <span class="title-block text-blue">Lịch sự kiện</span>
+                                        </div>
+                                        <div class="content-block height-block">
+                                            <div class="col-xs-12 nopadding event">
+                                                <div class="col-xs-4 nopadding event-left">
+                                                    <div class="w-full back-orange text-white text-bold">Thứ 3</div>
+                                                    <div class="w-full">16/07/2019</div>
+                                                </div>
+                                                <div class="col-xs-8 no-padding-right-2 event-right">
+                                                    <div class="text-justify">
+                                                        LỄ RA QUÂN CHIẾN DỊCH MÙA HÈ XANH HUTECH 2019
+                                                    </div>
+
+                                                    <div class="text-orange">
+                                                        <i class="fa fa-map-marker" aria-hidden="true"></i> Trụ sở chính 475A Điện Biên Phủ
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 nopadding event">
+                                                <div class="col-xs-4 nopadding event-left">
+                                                    <div class="w-full back-orange text-white text-bold">Thứ 7</div>
+                                                    <div class="w-full">08/06/2019</div>
+                                                </div>
+                                                <div class="col-xs-8 no-padding-right-2 event-right">
+                                                    <div class="text-justify">
+                                                        CHUNG KẾT CUỘC THI HUTECH DESIGNER 2019
+                                                    </div>
+
+                                                    <div class="text-orange">
+                                                        <i class="fa fa-map-marker" aria-hidden="true"></i> Trụ sở chính 475A Điện Biên Phủ
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 nopadding event">
+                                                <div class="col-xs-4 nopadding event-left">
+                                                    <div class="w-full back-orange text-white text-bold">Thứ 6</div>
+                                                    <div class="w-full">17/05/2019</div>
+                                                </div>
+                                                <div class="col-xs-8 no-padding-right-2 event-right">
+                                                    <div class="text-justify">
+                                                        VÒNG LOẠI CUỘC THI IDEA-X 2019
+                                                    </div>
+
+                                                    <div class="text-orange">
+                                                        <i class="fa fa-map-marker" aria-hidden="true"></i> Trụ sở chính 475A Điện Biên Phủ
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 nopadding event">
+                                                <div class="col-xs-4 nopadding event-left">
+                                                    <div class="w-full back-orange text-white text-bold">Thứ 4</div>
+                                                    <div class="w-full">08/05/2019</div>
+                                                </div>
+                                                <div class="col-xs-8 no-padding-right-2 event-right">
+                                                    <div class="text-justify">
+                                                        CHUNG KẾT VÀ TRAO GIẢI CUỘC THI THIẾT KẾ XANH - LẦN 3
+                                                    </div>
+
+                                                    <div class="text-orange">
+                                                        <i class="fa fa-map-marker" aria-hidden="true"></i> Trụ sở chính 475A Điện Biên Phủ
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 nopadding event">
+                                                <div class="col-xs-4 nopadding event-left">
+                                                    <div class="w-full back-orange text-white text-bold">Thứ 6</div>
+                                                    <div class="w-full">03/05/2019</div>
+                                                </div>
+                                                <div class="col-xs-8 no-padding-right-2 event-right">
+                                                    <div class="text-justify">
+                                                        CHẤM SƠ KHẢO CUỘC THI HUTECH DESIGNER 2019
+                                                    </div>
+
+                                                    <div class="text-orange">
+                                                        <i class="fa fa-map-marker" aria-hidden="true"></i> Trụ sở chính 475A Điện Biên Phủ
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <style>
+                            .no-padding-home {
+                                padding: 0 !important;
+                            }
+                        </style>
+
+                        <!-- Template End: site/home/WrapHome -->
+                        <!-- Template Start: site/common/WrapLienKet -->
+                        <div class="block-nopadding" id="lien-ket-dao-tao">
+                            <div class="content noidung">
+                                <div class="col-sm-12 back-white border-radius lien-ket-dao-tao">
+                                    <div class="text-center text-blue text-bold padding-bottom">TRƯỜNG ĐẠI HỌC ĐỐI TÁC</div>
+
+                                    <img class="icon-lien-ket-dao-tao" src="images/img_blank.gif">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Template End: site/common/WrapLienKet -->
+                        <!-- Template Start: site/common/WrapFooter -->
+                        <div class="block-nopadding footer back-blue padding-bottom">
+                            <div class="content noidung">
+                                <div class="col-sm-9 footer-left">
+                                    <div><b class="truso">Trụ sở:</b> 475A Điện Biên Phủ, P.25, Q.Bình Thạnh, TP.HCM</div>
+                                    <div class="coso"><b>Cơ sở 475B:</b> 475B Điện Biên Phủ, P.25, Q.Bình Thạnh, TP.HCM</div>
+                                    <div class="coso"><b>Cơ sở Ung Văn Khiêm:</b> 31/36 Ung Văn Khiêm, P.25, Q.Bình Thạnh, TP.HCM</div>
+                                    <div>ĐT: (028) 5445 7777 - Fax: (028) 5445 4444 - Email: hutech@hutech.edu.vn</div>
+                                </div>
+                                <div class="col-sm-3 footer-right">
+
+                                    <a href="https://www.facebook.com/hutechuniversity">
+                                        <img class="icon-lien-he-facebook" src="images/img_blank.gif">
+                                    </a>
+                                    <a href="https://www.youtube.com/user/dhcongnghetphcm" target="_blank">
+                                        <img class="icon-lien-he-youtube" src="images/img_blank.gif">
+                                    </a>
+                                    <a href="https://plus.google.com/+hutech" target="_blank">
+                                        <img class="icon-lien-he-google" src="images/img_blank.gif">
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <img class="icon-lien-he-twice" src="images/img_blank.gif">
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <img class="icon-lien-he-blog" src="images/img_blank.gif">
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <img class="icon-lien-he-tum" src="images/img_blank.gif">
+                                    </a>
+                                    <br> Bản quyền <span style="font-size: small;"><a href="https://www.hutech.edu.vn/admin"><strong>&copy;</strong></a></span> 2018 <a rel="author" href="https://plus.google.com/u/0/+hutech">HUTECH</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Template End: site/common/WrapFooter -->
+                        <!--hom thu-->
+                        <!-- Template Start: site/common/WrapOther -->
+                        <!-- subiz -->
+                        <script type="text/javascript">
+                            window._sbzq || function(e) {
+                                e._sbzq = [];
+                                var t = e._sbzq;
+                                t.push(["_setAccount", 61705]);
+                                var n = e.location.protocol == "https:" ? "https:" : "http:";
+                                var r = document.createElement("script");
+                                r.type = "text/javascript";
+                                r.async = true;
+                                r.src = n + "//static.subiz.com/public/js/loader.js";
+                                var i = document.getElementsByTagName("script")[0];
+                                i.parentNode.insertBefore(r, i)
+                            }(window);
+                        </script>
+
+                        <!-- Template End: site/common/WrapOther -->
+
+                    </div>
+        </section>
+        </div>
+</body>
+</html>
