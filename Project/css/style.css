@@ -7992,7 +7992,7 @@ ul.table.autoLayout.absSubMenus li ul{
     padding:0 !important
 }
 .news-block-bottom .img, .news-block-bottom .img2{
-    max-height:90px;
+    max-height:110px;
     overflow:hidden
 }
 .thumb-video{
@@ -8894,13 +8894,12 @@ dl.article-info dd, dl.article-info dt{
     font-size:13px
 }
 #bannerroot{
-    top:3px;
-    bottom:3px;
+    margin-top: 25px;
     background:url('../images/csetlu.jpg') no-repeat scroll left top transparent;
     overflow:hidden;
     width:1000px;
     text-align:right;
-    height:100px
+    height:130px
 }
 #bannermedia{
     top:0px;
