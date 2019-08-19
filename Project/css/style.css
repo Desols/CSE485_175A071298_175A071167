@@ -6319,6 +6319,7 @@ button.close{
 }
 .show{
     display:block !important
+    top: 0px;
 }
 .invisible{
     visibility:hidden
@@ -6847,7 +6848,7 @@ hr{
 }
 .block-nopadding{
     width:100%;
-    display:flex
+    display:flex;
 }
 .block-content{
     width:100%;
@@ -7514,7 +7515,7 @@ div.boxTitle-line-green{
     display:none
 }
 .show{
-    display:block
+    display: block;
 }
 #ja-cssmenu{
     margin:0;
