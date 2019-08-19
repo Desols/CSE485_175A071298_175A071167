@@ -62,19 +62,30 @@ $reps=$_POST['repassword'];
 <script src="../../js/repass.js" type="text/javascript"></script>
 <body>
   <section class="col-sm-12 content nopadding">
+    <div class="container nopadding">  
     <div class="row">
-       <?php include('header_student.php'); ?>
+        
+         <?php
+        if(!isset($_SESSION['user_level']) or( $_SESSION['user_level'] !=1 &&  $_SESSION['user_level']!=2 && $_SESSION['user_level']!=0))
+        {
+           include('../header/header_view.php');
+        }
+        else{
+          include('../header/header_view_student.php');
+        }
+
+?>
     </div>
- <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins" id="form_sign_up">
+ <div class="page-wrapper bg-gra-02 p-t-130 content noidung p-b-100 font-poppins bg-white pb-5" id="form_sign_up">
         <div class="wrapper wrapper--w680">
             <div class="card card-4">
-                <div class="card-body">
+                <div class="card-body alert-success">
                     <h2 class="title">Thay đổi mật khẩu</h2>
                     <form method="POST">
                         <div class="row row-space">
                             <div class="col-12">
                                 <div class="input-group">
-                                    <label class="label">Email</label>
+                                    <label class="label text-muted">Email</label>
                                     <input class="input--style-4" type="email" name="email" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>" id="email"   placeholder="">
                                     <i id="notice_email"></i>
                                 </div>
@@ -83,7 +94,7 @@ $reps=$_POST['repassword'];
                         <div class="row row-space">
                             <div class="col-12">
                                 <div class="input-group">
-                                    <label class="label">Mật khẩu cũ</label>
+                                    <label class="label text-muted">Mật khẩu cũ</label>
                                     <input class="input--style-4" id="password_old" type="password" name="password_old" placeholder="" value="<?php if (isset($_POST['password_old'])) echo $_POST['password_old']; ?>">
                                     <i id="notice_password_old"></i>
                                 </div>
@@ -92,7 +103,7 @@ $reps=$_POST['repassword'];
                         <div class="row row-space">
                             <div class="col-12">
                                 <div class="input-group">
-                                    <label class="label">Mật khẩu mới</label>
+                                    <label class="label text-muted">Mật khẩu mới</label>
                                     <input class="input--style-4" id="password_new" type="password" name="password_new" value="<?php if (isset($_POST['password_new'])) echo $_POST['password_new']; ?>">
                                     <i id="notice_password_new"></i>
                                 </div>
@@ -101,7 +112,7 @@ $reps=$_POST['repassword'];
                         <div class="row row-space">
                             <div class="col-12">
                                 <div class="input-group">
-                                    <label class="label">Nhập lại mật khẩu</label>
+                                    <label class="label text-muted">Nhập lại mật khẩu</label>
                                     <input class="input--style-4" id="repassword" type="password" name="repassword" value="<?php if (isset($_POST['repassword'])) echo $_POST['repassword']; ?>">
                                     <i id="notice_repassword"></i>
                                 </div>
@@ -137,8 +148,11 @@ if (!empty($_POST['email']) && !empty($ps=$_POST['password_old'])&& !empty($ps=$
                 </div>
             </div>
         </div>
+        <div class="row">
+          <?php include('../footer/footer.php') ?>         
+        </div>
     </div>
-  </section>>
+  </section>
 </body>
 
 </html>

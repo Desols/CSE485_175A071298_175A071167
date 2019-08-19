@@ -3,14 +3,15 @@ $(document).ready(function() {
 	$('#submit').click(function () {
 		var a=$('#inputState').val();
 		 $.ajax({
-                 url: '../../login_res.php',
+                 url: '../../php/view_teacher/insert_subject.php',
                  type: 'POST',
                  dataType: 'text',
                  data: {
-                     abc: $('#inputState').val(),
+                     email:$('#email').val(),
+                     subject: $('#inputState').val(),
                  },
                  success: function(data) {
-                 	// alert(data)
+                 	alert(data)
 
                  },
                  error: function(data) {

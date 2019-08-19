@@ -1,7 +1,5 @@
 
  <?php 
-
-
 require('mysql_connect.php'); 
 
 if(isset($_POST['login'])){
@@ -22,47 +20,42 @@ $ps=$_POST['password'];
               $_SESSION['user_level'] = (int) $row['user_level']; 
               echo $_SESSION['user_level'];
               // Ensure that the user level is an integer
-              if($_SESSION['user_level'] == 1)
-               {
-                  echo header('Location: index.php');             
-              }
-               else {
-               echo header('Location: sign_up.php');               
-              }                
+              // if($_SESSION['user_level'] == 1)
+              //  {
+                   echo header('Location: index.php');             
+              // }
+              //  else {
+              //  echo header('Location: sign_up.php');               
+              // }                
         } 
       }
   ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Colorlib Templates">
     <meta name="author" content="Colorlib">
     <meta name="keywords" content="Colorlib Templates">
-    <link rel="stylesheet" type="text/css" href="css/mycss.css"> 
 <link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.css"> 
 <link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.css">
+ <link rel="shortcut icon" href="images/CSE logo.jpg" type="image/jpg"/>
+ <link rel="stylesheet" type="text/css" href="css/mycss.css">
+ <link rel="stylesheet" href="css/style.css">
     <title>Đăng nhập</title>
 </head>
 <script src="js/jquery-3.4.1.min.js"></script>
-<script src="js/bootstrap.js"></script>
 <script src="js/login.js"></script>
-<link rel="stylesheet" type="text/css" href="css/mycss.css"> 
-<link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.css">
-<link rel="stylesheet" href="css/bootstrap.css">
-<script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/bootstrap.js"></script> 
-    <link rel="shortcut icon" href="images/CSE logo.jpg" type="image/jpg"/>
+   
     <script type="text/javascript" src="js/script.js" defer></script>
-    <link rel="stylesheet" href="css/style.css">
+    
 <body>
   <section class="col-sm-12 content nopadding">
     <div class="row">
       <?php
-         session_start();
         if(!isset($_SESSION['user_level']) or( $_SESSION['user_level'] !=1 &&  $_SESSION['user_level']!=2 && $_SESSION['user_level']!=0))
         {
            include('php/header/header_view.php');
@@ -75,7 +68,7 @@ $ps=$_POST['password'];
     </div>
  
 
-  <div class="container p-5 bg-white">
+  <div class="container p-5 bg-white content noidung pb-5">
     <div class="row">
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto bg-primary">
         <div class="card card-signin my-5 ">
@@ -129,6 +122,9 @@ if (!empty($_POST['email']) && !empty($ps=$_POST['password'])) {
         </div>
       </div>
     </div>
+    <div class="row">
+          <?php include('php/footer/footer.php') ?>         
+        </div>
   </div>
 
 

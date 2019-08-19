@@ -15,13 +15,11 @@
 <!-- <script src="js/sign_up.js"></script> -->
 <body>
 	<section class="col-sm-12 content nopadding">
-		<div class="container nopadding">
-			
-		
+		<div class=" nopadding">					
     <div class="row">
     	<?php
          session_start();
-        if(!isset($_SESSION['user_level']) && $_SESSION['user_level'] !=1 &&  $_SESSION['user_level']!=2 && $_SESSION['user_level']!=0)
+        if((!isset($_SESSION['user_level'])) || ($_SESSION['user_level'] !=1 &&  $_SESSION['user_level']!=2 && $_SESSION['user_level']!=0))
         {
            include('../header/header_view.php');
         }
@@ -32,8 +30,16 @@
 ?>
     </div>
 
-<div class="container-fluid bg-white ">
+<div class="container-fluid bg-white content noidung pb-5 p-0">
 		<h4 align="center">Danh sách giảng viên</h4>
+		<?php
+         
+        if(isset($_SESSION['user_level']) && $_SESSION['user_level']==0)
+        {
+            echo '<center><button type="submit" class alert-success><a href="http://localhost/Big_project/php/view_teacher/view_teacher_admin.php" title="">Thêm giảng viên</a></button></center>';
+        }
+
+?>
 		<?php 
 require_once ('../../mysql_connect.php');
 $query="SELECT * FROM teacher ";
@@ -47,12 +53,12 @@ while($row=@mysqli_fetch_array($result,MYSQLI_ASSOC))
 						$link= '../../photo_card/'.$row['screaming'];
 					}
  ?>
-		<div class="row ">
+		<div class="row">
 		<div class="col-xl-2">
 				
 			</div>	
         <div class=" col-xl-8 ">
-				<div class="row  alert-link " style="border: 1px dashed #7E7E7D">
+				<div class="row  alert-link pb-1" style="border: 1px dashed #7E7E7D">
 					<div class=" col-sm-4 col-lg-4 col-xl-4 text-center alert-secondary">
 					<img src="<?php echo $link; ?> " class="" alt="Hình ảnh" width="150px">  <h4 class=" alert-info">
 	                		<?php echo $row['name']; ?>
@@ -95,6 +101,9 @@ while($row2=@mysqli_fetch_array($result2,MYSQLI_ASSOC))
 </div>
 <?php } ?>
 </div>
+<div class="row">
+          <?php include('../footer/footer.php') ?>         
+        </div>
 </div>
 </section>
 </body>

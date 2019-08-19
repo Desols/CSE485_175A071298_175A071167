@@ -60,3 +60,26 @@ $(document).ready(function() {
         }
     });
 });
+
+
+$(document).ready(function() {
+    $('#bt_code').click(function() {
+            $.ajax({
+                url: 'sign_code.php',
+                type: 'POST',
+                dataType: 'text',
+                data: {
+                    email: e,
+                    password: $('#password').val(),
+                },
+                success: function(data) {
+                    $("#notice_email").html('Email không hợp lệ');
+
+                },
+                error: function(data) {
+                    alert('Error');
+                }
+
+            });
+    });
+     });

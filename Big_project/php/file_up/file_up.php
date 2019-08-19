@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['user_level']) or ($_SESSION['user_level']) != 1 or ($_SESSION['user_level']) != 0)
+if (!isset($_SESSION['user_level']) or (($_SESSION['user_level']) != 1 and ($_SESSION['user_level']) != 0))
 {
    header("Location: ../../login.php");
    exit();
@@ -56,21 +56,44 @@ mysqli_close($dbcon);
 	<script src="../../js/jquery-3.4.1.min.js" type="text/javascript"></script> 
 	<script type="text/javascript" charset="utf-8" language="javascript" src="../../js/jquery.dataTables.js"></script>
 	<script type="text/javascript" charset="utf-8" language="javascript" src="../../js/DT_bootstrap.js"></script>
+	<script src="../../js/jquery-3.4.1.min.js"></script>
+<script src="../../js/login.js"></script>
+
+<script src="../../js/bootstrap.js"></script>
 
 <style>
 </style>
 <body>
+	<section class="col-sm-12 content nopadding">
+    <div class="container nopadding">
+      
+    
+    <div class="row">
+      <?php
+        if((!isset($_SESSION['user_level'])) || ($_SESSION['user_level'] !=1 &&  $_SESSION['user_level']!=2 && $_SESSION['user_level']!=0))
+        {
+           include('../header/header_view.php');
+        }
+        else{
+          include('../header/header_view_student.php');
+        }
 
-	    <div class="row-fluid">
+?>
+    </div>
+
+	    <div class="row-fluid content noidung ">
 	        <div class="span12">
-	            <div class="container">
+	            <div class="container alert-primary">
 		<br />
 		<h1 align="center"><p> Thư viện</p></h1>	
 		<br />
 		<br />
 			<form enctype="multipart/form-data" action="" name="form" method="POST">
-				Select File
-					<input type="file" name="photo" id="photo" value="" />
+				<div class="form-row">
+					Select File
+					<input type="file" name="photo" id="photo" value="" class="col-md-6" />
+				</div>
+				
 					<div class="col-12">
 
 					<label for="">Chọn môn : </label>
@@ -108,10 +131,10 @@ mysqli_close($dbcon);
 
 
 		 ?>
-		<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
+		<table cellpadding="0" cellspacing="0" border="0" class="table  table-bordered bg-white" id="example">
 			<thead>
 				<tr>
-					<th width="90%" align="center"><?php echo $id." - ".$name_subject; ?></th>
+					<th width="90%" align="center" class="alert-success"><?php echo $id." - ".$name_subject; ?></th>
 						
 				</tr>
 			</thead>
@@ -149,10 +172,10 @@ mysqli_close($dbcon);
     	$id=$row1['id_subject'];
     	$name_subject=$row1['name'];
  ?>
- <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
+ <table cellpadding="0" cellspacing="0" border="0" class="table table-striped bg-white table-bordered" id="example">
 			<thead>
 				<tr>
-					<th width="90%" align="center"><?php echo $id." - ".$name_subject; ?></th>
+					<th width="90%" align="center" class="alert-success" ><?php echo $id." - ".$name_subject; ?></th>
 						
 				</tr>
 			</thead>
@@ -189,10 +212,12 @@ mysqli_close($dbcon);
 	</div>
 	</div>
 	</div>
+	<div class="row">
+          <?php include('../footer/footer.php') ?>         
+        </div>
+</div>
+</section>
 
-<script src="../../js/jquery-3.4.1.min.js"></script>
-<script src="../../js/login.js"></script>
 
-<script src="../../js/bootstrap.js"></script>
 </body>
 </html>

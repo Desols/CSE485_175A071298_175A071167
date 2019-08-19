@@ -2,11 +2,32 @@
 <link rel="stylesheet" type="text/css" href="../../css/fontawesome/css/all.css">
 <link rel="stylesheet" href="../../css/bootstrap.css">
 <script src="../../js/jquery-3.4.1.min.js"></script>
-<script src="../../js/bootstrap.js"></script>
-
+<script src="../../js/bootstrap.js"></script> 
     <link rel="shortcut icon" href="../../images/CSE logo.jpg" type="image/jpg"/>
     <script type="text/javascript" src="../../js/script.js" defer></script>
     <link rel="stylesheet" href="../../css/style.css">
+                <div class="container nopadding">
+                <div class="block-nopadding back-blue" id="menumobile">
+                    <div class="content noidung">
+                        <div class="col-xs-6 nopadding menumobile-left">
+                            <span id="openmenu" class="sb-open-left"><i class="fas fa-bars" aria-hidden="true"></i>&nbsp;Danh mục</span>
+                            <span id="closemenu" class="sb-open-left2"><i class="fas fa-times" aria-hidden="true"></i>&nbsp;Danh mục</span>
+                        </div>
+                        <div class="col-xs-6 nopadding text-right">
+                            <div class="language">
+
+                                <a href="trangchu.html">
+                                    <img class="icon_vn" src="images/img_blank.gif">
+                                </a>
+                                &nbsp;
+                                <a href="english.html">
+                                    <img class="icon_en" src="images/img_blank.gif">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
                 <div class="block nopadding"  >
                     <div class="content noidung back-white">
@@ -53,7 +74,8 @@
                     <div class="content noidung menu-desktop">
                         <ul class="table autoLayout absSubMenus" id="ja-cssmenu">
                             <li>
-                                <a href="trangchu.html"><i class="fa fa-home fa-1-5" aria-hidden="true"></i></a>
+                                <a href="http://localhost/Big_project/index.php">
+                                    <i class="fas fa-home fa-1-5 " aria-hidden="true"></i></a>
 
                             </li>
                             <li>
@@ -135,7 +157,7 @@
                                 </ul>
                             </li>
                              <li id="topmenu2">
-                                <a href="../view_teacher/view_teacher.php"><span class="menu-title">Giảng viên</span></a>
+                                <a href="http://localhost/Big_project/php/view_teacher/view_teacher.php"><span class="menu-title">Giảng viên</span></a>
                             </li>
                             <li>
                                 <a href="#"><span class="menu-title">SINH VIÊN</span></a>
@@ -184,7 +206,7 @@
                             </li>
                            
                             <li id="topmenu4">
-                                <a href="../../login.php" style="border-right: 0px none;"><span class="menu-title">Login</span></a>
+                                <a href="http://localhost/Big_project/login.php" style="border-right: 0px none;"><span class="menu-title">Login</span></a>
                             </li>
                         </ul>
 

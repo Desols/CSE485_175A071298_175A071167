@@ -1,11 +1,11 @@
 
 <?php
 session_start();
-if (!isset($_SESSION['user_level']) or ($_SESSION['user_level']) != 2 )
-{
-   header("Location: ../../login.php");
-   exit();
-}
+ if (!isset($_SESSION['user_level']) or (($_SESSION['user_level']) != 2 and ($_SESSION['user_level'])) != 2)
+ {
+    header("Location: ../../login.php");
+    exit();
+ }
 ?>
 <?php
 require_once ('../../mysql_connect.php');
@@ -22,15 +22,35 @@ require_once ('../../mysql_connect.php');
         <link rel="stylesheet" type="text/css" href="css/DT_bootstrap.css"> -->
 </head>
 	<script src="../../js/bootstrap.js" type="text/javascript"></script> 
-	<script src="../../js/jquery-3.4.1.min.js" type="text/javascript"></script> 
+	<script src="../../js/jquery-3.4.1.min.js" type="text/javascript"></script>
+	<script src="../../js/jquery-3.4.1.min.js"></script>
+<script src="../../js/login.js"></script>
+
+<script src="../../js/bootstrap.js"></script> 
 
 <style>
 </style>
 <body>
+	<section class="col-sm-12 content nopadding">
+    <div class="container nopadding">
+      
+    
+    <div class="row">
+      <?php
+        if((!isset($_SESSION['user_level'])) || ($_SESSION['user_level'] !=1 &&  $_SESSION['user_level']!=2 && $_SESSION['user_level']!=0))
+        {
+           include('../header/header_view.php');
+        }
+        else{
+          include('../header/header_view_student.php');
+        }
 
-	    <div class="row-fluid">
+?>
+    </div>
+
+	    <div class="row-fluid content noidung pb-5">
 	        <div class="span12">
-	            <div class="container">
+	            <div class="container alert-success">
 		<br />
 		<h1 align="center"><p> Thư viện</p></h1>	
 		<br />
@@ -72,7 +92,7 @@ require_once ('../../mysql_connect.php');
 
 
 		 ?>
-		<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
+		<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered bg-white" id="example">
 			<thead>
 				<tr>
 					<th width="90%" align="center" class="alert-danger"><?php echo $id." - ".$name_subject; ?></th>
@@ -113,10 +133,10 @@ require_once ('../../mysql_connect.php');
     	$id=$row1['id_subject'];
     	$name_subject=$row1['name'];
  ?>
- <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
+ <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered bg-white" id="example">
 			<thead>
 				<tr>
-					<th width="90%" align="center"><?php echo $id." - ".$name_subject; ?></th>
+					<th width="90%" align="center" class="alert-danger" ><?php echo $id." - ".$name_subject; ?></th>
 						
 				</tr>
 			</thead>
@@ -153,10 +173,12 @@ require_once ('../../mysql_connect.php');
 	</div>
 	</div>
 	</div>
+	<div class="row">
+          <?php include('../footer/footer.php') ?>         
+        </div>
+</div>
+</section>
 
-<script src="../../js/jquery-3.4.1.min.js"></script>
-<script src="../../js/login.js"></script>
 
-<script src="../../js/bootstrap.js"></script>
 </body>
 </html>

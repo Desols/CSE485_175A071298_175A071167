@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 if (!isset($_SESSION['user_level'])) {
 header("Location:sign_up.php");

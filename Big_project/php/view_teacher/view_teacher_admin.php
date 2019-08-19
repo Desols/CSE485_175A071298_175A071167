@@ -53,6 +53,7 @@ if(isset($_POST['register'])){
 	<link rel="stylesheet" type="text/css" href="../../css/mycss.css"> 
 	<link rel="stylesheet" type="text/css" href="../../css/fontawesome/css/all.css"> 
     <link rel="stylesheet" href="../../css/bootstrap.css">
+     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <script src="../../js/jquery-3.4.1.min.js"></script>
 <script src="../../js/view_teacher.js"></script>
@@ -60,8 +61,27 @@ if(isset($_POST['register'])){
 
 
 <body>
+  <section class="col-sm-12 content nopadding">
+    <div class=" nopadding">
+      
+    
+    <div class="row">
+      <?php
+         session_start();
+        if((!isset($_SESSION['user_level'])) || ($_SESSION['user_level'] !=1 &&  $_SESSION['user_level']!=2 && $_SESSION['user_level']!=0))
+        {
+           include('../header/header_view.php');
+        }
+        else{
+          include('../header/header_view_student.php');
+        }
 
-<form method="POST" enctype="multipart/form-data" class="alert-success m-1 p-5 w-auto">
+?>
+    </div>  
+<div class="container-fluid bg-white content noidung p-0">
+
+<form method="POST" enctype="multipart/form-data" class="alert-success m-1 p-5">
+  <center><h3>Thêm mới giảng viên</h3></center>
   <div class="form-row">
     <div class="form-group">
       <label for="inputEmail4">Email</label>
@@ -110,7 +130,9 @@ if(isset($_POST['register'])){
       
       	if(isset($_POST['register']))
       	{
-        $name=$_FILES['photo']['name'];
+          $name=$_FILES['photo']['name'];
+          if($name){
+        
       	$filename=stripcslashes($_FILES['photo']['name']);
         $extension=getExtension($filename);
         $extension=strtolower($extension);
@@ -118,12 +140,15 @@ if(isset($_POST['register'])){
         {
 	   echo 'Đây không phải hình ảnh';
         }
+      }
 
 }
       	 ?>
       </div>
     </div>
-    <button type="submit" name="register" id="submit" class="btn btn-primary">Thêm</button>
+    <div class="form-row w-100" >
+       <button type="submit" name="register" id="submit" class=" btn btn-primary">Thêm</button>
+    </div>   
     <div>
     	<ul id="hala">
     	</ul>   
@@ -131,6 +156,12 @@ if(isset($_POST['register'])){
     </div>
    
 </form>
+</div>
+<div class="row">
+          <?php include('../footer/footer.php') ?>         
+        </div>
+</div>
+</section>
 	
 </body>
 </html>

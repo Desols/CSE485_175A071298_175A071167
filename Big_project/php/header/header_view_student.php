@@ -7,6 +7,28 @@
     <link rel="shortcut icon" href="../../images/CSE logo.jpg" type="image/jpg"/>
     <script type="text/javascript" src="../../js/script.js" defer></script>
     <link rel="stylesheet" href="../../css/style.css">
+                <div class="container nopadding">
+                <div class="block-nopadding back-blue" id="menumobile">
+                    <div class="content noidung">
+                        <div class="col-xs-6 nopadding menumobile-left">
+                            <span id="openmenu" class="sb-open-left"><i class="fas fa-bars" aria-hidden="true"></i>&nbsp;Danh mục</span>
+                            <span id="closemenu" class="sb-open-left2"><i class="fas fa-times" aria-hidden="true"></i>&nbsp;Danh mục</span>
+                        </div>
+                        <div class="col-xs-6 nopadding text-right">
+                            <div class="language">
+
+                                <a href="trangchu.html">
+                                    <img class="icon_vn" src="images/img_blank.gif">
+                                </a>
+                                &nbsp;
+                                <a href="english.html">
+                                    <img class="icon_en" src="images/img_blank.gif">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
                 <div class="block nopadding"  >
                     <div class="content noidung back-white">
@@ -38,8 +60,7 @@
                                         this.value = 'Tìm kiếm ';" onfocus="if (this.value == 'Tìm kiếm ')
                                                     this.value = '';"> 
                             <span class="input-group-addon">
-                                <button id="btnsearch" type="button" onclick="check_search()">
-                                    
+                                <button id="btnsearch" type="button" onclick="check_search()">                               
                                 </button>
                             </span>
                         </div>
@@ -53,7 +74,7 @@
                     <div class="content noidung menu-desktop">
                         <ul class="table autoLayout absSubMenus" id="ja-cssmenu">
                             <li>
-                                <a href="trangchu.html"><i class="fa fa-home fa-1-5" aria-hidden="true"></i></a>
+                                <a href="http://localhost/Big_project/index.php"><i class="fas fa-home fa-1-5" aria-hidden="true"></i></a>
 
                             </li>
                             <li>
@@ -134,6 +155,9 @@
 
                                 </ul>
                             </li>
+                             <li id="topmenu2">
+                                <a href="http://localhost/Big_project/php/view_teacher/view_teacher.php"><span class="menu-title">Giảng viên</span></a>
+                            </li>
                             <li>
                                 <a href="#"><span class="menu-title">SINH VIÊN</span></a>
                                 <ul>
@@ -180,19 +204,27 @@
                                 </ul>
                             </li>
                             <li id="topmenu1">
-                                <a target="_blank"><span class="menu-title">Thư Viện</span></a>
-                            </li>
-                            <li id="topmenu2">
-                                <a><span class="menu-title">Góp ý</span></a>
+                                <a target="_blank" href="<?php
+                                       if(!isset($_SESSION['user_level']))
+                                                {
+                                          
+                                               }
+                                           else if($_SESSION['user_level'] ==1){
+                                             echo 'http://localhost/Big_project/php/file_up/file_view_student.php';                                            
+                                               }
+                                               else{
+                                                echo 'http://localhost/Big_project/php/file_up/file_up.php';
+                                               } 
+                                               ?> "><span class="menu-title">Thư Viện</span></a>
                             </li>
                             <li>
                                 <a href="#"><span class="menu-title">TÀI KHOẢN</span></a>
                                 <ul>
                                     <li>
-                                        <a href="../../logout.php"><span class="menu-title">Logout</span></a>
+                                        <a href="http://localhost/Big_project/logout.php"><span class="menu-title">Logout</span></a>
                                     </li>
                                     <li>
-                                        <a href="../change_password/change_password.php" target="_blank"><span class="menu-title">Thay đổi mật khẩu</span></a>
+                                        <a href="http://localhost/Big_project/php/change_password/change_password.php" target="_blank"><span class="menu-title">Thay đổi mật khẩu</span></a>
                                     </li>
                                 </ul>
                             </li>
